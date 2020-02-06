@@ -17,7 +17,7 @@ func cutUpNum(i int) []int {
 
 	s := strconv.Itoa(i)
 	r := []rune(s)
-	var j []int
+	j := make([]int, 0, 6)
 
 	for k := 0; k < len(r); k++ {
 
@@ -81,19 +81,6 @@ func pairIsLegit(i []int) bool {
 		return false
 	}
 
-}
-
-func hasThreeOfAKind(i []int) bool {
-
-	for j := 0; j < len(i)-2; j++ {
-
-		if i[j] == i[j+1] && i[j+1] == i[j+2] {
-
-			return true
-		}
-	}
-
-	return false
 }
 
 func countPwds(i []int) int {
